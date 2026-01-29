@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        body{
+            background: #f4f6f8;
+            padding: 20px;
+
+        }
+        h1{
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .grid-container{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+
+            grid-auto-rows:150px;
+            gap:20px;
+
+            justify-items: stretch;
+            align-items: stretch;
+
+            background: #0bdcc3;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .item{
+            background: linear-gradient(135deg,#4facfe,#0c39de);
+            color: #f4f6f8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+            transition:0.3s;
+        }
+        .item:hover{
+            transform:scale(1.05);
+            background: linear-gradient(135deg,#add608,#4facfe) ;
+            cursor: pointer;
+        }
+        .item1{
+            grid-column: span 2;
+
+        }
+        .item2{
+            grid-row: span 2;
+        }
+        .item3{
+            grid-column:  1 / 3;
+        }
+
+        .area-container{
+            margin-top:40px;
+            display: grid;
+            grid-template-areas: "header header header"
+                                 "sidebar content content"
+                                 "sidebar content content"
+                                 "footer footer footer";
+        grid-template-columns:1fr 2fr 2fr;
+        grid-template-rows: 80px 200px 80px; 
+        gap: 20px;
+        }
+        .header{
+            grid-area: header;
+            background: #db4949;
+        }
+        .sidebar{
+            grid-area:sidebar ;
+            background: #db4949;
+        }
+        .content{
+            grid-area:content ;
+            background: #db4949;
+        }
+        .footer{
+            grid-area: footer;
+            background: #db4949;
+        }
+.parent {
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    gap: 8px;
+}
+    
+.div1 {
+    grid-column: span 11 / span 11;
+    background-color: #4facfe;
+}
+
+.div2 {
+    grid-row: span 3 / span 3;
+    grid-row-start: 2;
+    background: #0bdcc3;
+}
+
+.div3 {
+    grid-column: span 3 / span 3;
+    grid-row: span 3 / span 3;
+    grid-row-start: 2;
+    background: #add608;
+}
+
+.div4 {
+    grid-column: span 6 / span 6;
+    grid-row: span 4 / span 4;
+    grid-column-start: 5;
+    grid-row-start: 2;
+    background: #db4949;
+}
+
+.div5 {
+    grid-column: span 4 / span 4;
+    grid-column-start: 1;
+    grid-row-start: 5;
+    background: blueviolet;
+}
+
+.div6 {
+    grid-row: span 7 / span 7;
+    grid-column-start: 11;
+    grid-row-start: 2;
+    background: #0bdcc3;
+}
+
+.div7 {
+    grid-column: span 5 / span 5;
+    grid-row: span 3 / span 3;
+    grid-row-start: 6;
+    background: #add608;
+}
+
+.div8 {
+    grid-column: span 4 / span 4;
+    grid-row: span 3 / span 3;
+    grid-column-start: 6;
+    grid-row-start: 6;
+    background: #db4949;
+}
+
+.div9 {
+    grid-row: span 4 / span 4;
+    grid-column-start: 10;
+    grid-row-start: 6;
+    background: blueviolet;
+}
+
+.div10 {
+    grid-column-start: 11;
+    grid-row-start: 9;
+    background: #0bdcc3;
+}
+
+.div12 {
+    grid-column: span 9 / span 9;
+    grid-column-start: 1;
+    grid-row-start: 9;
+    background: #add608;
+}
+    </style>
+</head>
+<body>
+    <h1>grid</h1>
+    <div class="grid-container">
+        <div class="item item1">item 1 colsspan</div>
+        <div class="item item2">item 2 rowsspan</div>
+        <div class="item ">item 3</div>
+        <div class="item item3">item 4 custom cols</div>
+        <div class="item ">item 5</div>
+        <div class="item ">item 6</div>
+        <div class="item ">item 7</div>
+        <div class="item ">item 8</div>
+    </div>
+    <div class="area-container">
+        <div class="area-box header">header</div>
+        <div class="area-box sidebar">sidebar</div>
+        <div class="area-box content">content</div>
+        <div class="area-box footer">footer</div>
+    </div>
+
+    <div class="parent">
+    <div class="div1">1</div>
+    <div class="div2">2</div>
+    <div class="div3">3</div>
+    <div class="div4">4</div>
+    <div class="div5">5</div>
+    <div class="div6">6</div>
+    <div class="div7">7</div>
+    <div class="div8">8</div>
+    <div class="div9">9</div>
+    <div class="div10">10</div>
+    <div class="div12">12</div>
+</div>
+</body>
+</html>

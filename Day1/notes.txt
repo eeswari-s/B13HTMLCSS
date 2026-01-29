@@ -1,0 +1,4 @@
+HTML:
+
+HTML is a markup language used to create web pages.
+it defines the structurre of a website.

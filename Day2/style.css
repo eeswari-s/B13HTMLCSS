@@ -1,0 +1,47 @@
+
+
+/*selectors */
+body{
+    background-color: darkcyan;
+}
+
+/* tag slector */
+ /* h1{
+            color: chartreuse;
+        } */
+        /* class slector */
+        .name{
+            color: rgb(226, 16, 219);
+        }
+        /* id slector */
+        #heading{
+            color: rgb(51, 9, 236);
+        }
+    /*universal selector */
+    *{
+        color: rgb(255, 0, 0);
+        margin-top: 0px;
+        padding: 0px;
+    }
+
+    h6,h3,p{
+        color: rgba(255, 0, 0, 0.64);
+    }
+
+    div p{
+        color: rgb(194, 225, 18);
+    }
+
+    div > h4{
+        color: rgb(12, 181, 227);
+    }
+
+    input[type="text"]{
+        color: rgba(161, 11, 136, 0.478);
+    }
+
+
+    /* colors-backgrround colors */
+
+    
+        

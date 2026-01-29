@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: 'Courier New', Courier, monospace;
+            background: #f4fafb;
+            padding: 30px;
+        }  
+  h1{
+    text-align: center;
+    margin-bottom: 30px;
+    color: blue;
+    font-weight: 900;
+  }
+  .row{
+    display: flex;
+    gap:30px;
+    flex-wrap: wrap;
+  }
+  .box{
+    width: 200px;
+    height: 120px;
+    background: #f7b5b5;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+  }
+  .shadow-basic{
+    box-shadow: 2px 2px 2px 1px rgba(10, 21, 8, 0.2);
+  }
+  .shadow-multi{
+    box-shadow: 15px 15px 110px  rgba(214, 11, 11, 0.896),
+                20px 20px 20px  rgba(14, 4, 199, 0.845),
+                30px 30px 30px  rgba(19, 215, 5, 0.845),
+                40px 40px 40px  rgba(14, 4, 199, 0.845);     
+  }
+  shadow-inset{
+   box-shadow: inset 15px 15px 110px  rgba(214, 11, 11, 0.896);   
+  }
+  .text-shadow{
+    font-size: 28px;
+    text-shadow: 13px 13px 3px  rgba(214, 11, 11, 0.896);
+  }
+
+  /*==filters===*/
+  img{
+    width: 200px;
+    height: 160px;
+    border-radius: 5px;
+  }
+  .blur:hover{
+    filter: blur(3px);
+  }
+  .bright:hover{
+    filter: brightness(1.5);
+  }
+  .contrst:hover{
+    filter: contrast(1.5);
+  }
+  .gray:hover{
+    filter: grayscale(1);
+  }
+  .sepia:hover{
+    filter: sepia(1);
+  }
+  .hue:hover{
+    filter: hue-rotate(90deg);
+  }
+  .drop:hover{
+    filter: drop-shadow(3px 3px 3px  rgba(214, 11, 11, 0.896));
+    filter: blur(3px);
+  }
+  /*blend mode*/
+  .blend-box{
+    background: url("https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSEDaMEoX0Tkzqw74YSBab3HI2czZ14hUpGxq1Wuko5h6hGPVhF")center/cover,
+    rgba(214, 11, 11, 0.612);
+    background-blend-mode: multiply;
+    color:#f4fafb;
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  .mix{
+    background: url(https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSEDaMEoX0Tkzqw74YSBab3HI2czZ14hUpGxq1Wuko5h6hGPVhF);
+    background-color: rgba(201, 7, 7, 0.5);
+    background-size: cover;
+    background-position: center;
+    color: #f4fafb;
+   
+  }
+  .mix{
+    mix-blend-mode:difference;
+  }
+
+    </style>
+</head>
+<body>
+    <h1>css shadows & blend modes</h1>
+    <h2>shadow</h2>
+    <div class="row">
+        <div class="box shadow-basic">boxshadow</div>
+        <div class="box shadow-multi">multi</div>
+        <div class="box shadow-inset">inset</div>
+        <div class="text-shadow">text</div>
+    </div>
+    <h1> filters</h1>
+    <div class="row">
+        <img class="blur"src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSEDaMEoX0Tkzqw74YSBab3HI2czZ14hUpGxq1Wuko5h6hGPVhF">
+        <img class="bright"src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSEDaMEoX0Tkzqw74YSBab3HI2czZ14hUpGxq1Wuko5h6hGPVhF">
+        <img class="contrst"src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSEDaMEoX0Tkzqw74YSBab3HI2czZ14hUpGxq1Wuko5h6hGPVhF">
+        <img class="gray"src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSEDaMEoX0Tkzqw74YSBab3HI2czZ14hUpGxq1Wuko5h6hGPVhF">
+        <img class="sepia"src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSEDaMEoX0Tkzqw74YSBab3HI2czZ14hUpGxq1Wuko5h6hGPVhF">
+        <img class="hue"src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSEDaMEoX0Tkzqw74YSBab3HI2czZ14hUpGxq1Wuko5h6hGPVhF">
+        <img class="drop"src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSEDaMEoX0Tkzqw74YSBab3HI2czZ14hUpGxq1Wuko5h6hGPVhF">
+
+    </div>
+    <h1>backdrop filters</h1>
+    <div class="glass">
+        <div class="box blend-box">background</div>
+        <div class="box mix">mix</div>
+    </div>
+</body>
+</html>

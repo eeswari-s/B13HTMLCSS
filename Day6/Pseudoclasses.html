@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ <style>
+    body{
+        background-color: #0bdcc3;
+        padding: 30px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    }
+    h1{
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    a:link{
+        color: rgb(12, 36, 220);
+        text-decoration: none;
+    }
+a:visited{
+    color: rgb(60, 8, 216);
+    text-decoration: none;
+}
+a:hover{
+    color: rgb(220, 16, 16);
+    text-decoration: underline;
+}
+a:active{
+    color: rgb(0, 0, 0);
+    text-decoration: underline;
+}
+input{
+    padding: 10px;
+    margin: 10px 0;
+
+}
+  input:focus{
+    border: 2px solid rgb(5, 35, 230);
+    background-color: rgb(5, 35, 230);
+  }
+  input:disabled{
+    background-color: rgb(214, 27, 27);
+    color: rgb(255, 255, 255);
+  }
+ 
+
+  li:first-child{
+    color: rgb(255, 0, 0);
+  }
+  li:last-child{
+    color: rgb(0, 255, 0);
+  }
+  li:nth-child(2){
+    color: rgb(232, 164, 164);
+  }
+  li:nth-child(3){
+    color: rgb(0, 255, 0);
+  }
+  li:nth-child(4){
+    color: rgb(255, 0, 0);
+  }
+  h1::first-letter{
+    font-size: 50px;
+    color: rgb(10, 45, 243);
+  }
+  h1:nth-child(odd){
+    color: rgb(255, 0, 0);
+  }
+
+  input :checked + label{
+    color: rgb(236, 13, 217);
+    font-weight: bold;
+  }
+ 
+  p:not(.skip){
+    color: rgb(255, 0, 0);
+  }
+p::before{
+    content: "this is before";
+    color: rgb(238, 43, 43);
+}
+p::after{
+    content: "⭐";
+    color: rgb(238, 43, 43);
+}
+html{
+    scroll-behavior: smooth;
+}
+
+header{
+    position: sticky;
+    top: 20px;
+    background-color: #86e8b5;
+    padding: 10px;
+    color: rgb(9, 12, 212);
+    text-align: center;
+    z-index:10;
+}
+header a{
+    color: rgb(236, 13, 217);
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+section{
+    height: 100vh;
+    padding: 40px;
+}
+.one{
+    background-color: #8c0bc3;
+}
+.two{
+    background-color: #cbdc16;
+}
+.three{
+    background-color: #bd1479;
+}
+.parallax{
+    background-image: url("https://picsum.photos/1200/800");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    color: salmon;
+}
+
+.snap-container{
+    height: 100vh;
+    scroll-snap-type: scroll;
+    overflow-y: scroll;
+}
+
+snap-section{
+    height: 100vh;
+    scroll-snap-align: start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+}
+.box{
+    width: 100px;
+    height: 100px;
+   background:url("https://upload.wikimedia.org/wikipedia/commons/b/b6/Image_created_with_a_mobile_phone.png") center/cover;
+    margin: 10px;
+   
+}
+.circle{
+    clip-path:circle(50% at 50% 50%);
+}
+
+.polygon{
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+.mask{
+    width:250px;
+    height: 250px;
+    background: url("https://i0.wp.com/picjumbo.com/wp-content/uploads/view-of-islands-from-airplane-window-during-landing-free-image.jpeg?h=800&quality=80") center/cover;
+
+    mask-image:radial-gradient(circle, white 60% , transparent 70%);
+    -webkit-mask-image:radial-gradient(circle, white 60%,transparent 70%);
+    mask-size: cover;
+    -webkit-mask-size: cover;
+    mask-position: center;
+    -webkit-mask-position: center;
+}
+ </style>
+</head>
+<body>
+  <h1>Pseudoclasses</h1>
+  <a href="#">Pseudoclasses</a>
+  <a href="https://www.w3schools.com/cssref/css_selectors.asp">Pseudoclasses</a>
+  <br><br>
+  <input type="text" name="name" id="name" placeholder="focus ">
+  <br>
+  <input type="email" name="email" id="email" disabled placeholder="disabled">
+  <ul>
+    <li>one</li>
+    <li>two</li>
+    <li>three</li>
+  </ul>
+  <p>this is para</p>
+
+  <input type="checkbox" id="check">
+  <label for="check">click me</label>
+
+  <header>
+    <a href="#sec1">1section</a>
+    <a href="#sec2">2section</a>
+    <a href="#sec3">3section</a>
+  </header>
+
+  <section id="sec1" class="one">
+    <h1>Lorem ipsum dolor sit amet consectetur.</h1>
+  </section>
+  <section id="sec2" class="parallax">
+    <h1>Lorem, ipsum dolor. parallex</h1>
+    <p>Lorem ipsum dolor sit amet.
+    </p>
+  </section>
+
+
+  <section id="sec3" class="two">
+    <h1>Lorem, ipsum dolor.</h1>
+
+
+  <div class="snap-container">
+    <div class="snap-section">snap1</div>
+    <div class="snap-section">snap2</div>
+    <div class="snap-section">snap3</div>
+  </div>
+
+  
+    </section>
+
+    <div class="box circle"></div>
+    <div class="box polygon"></div>
+
+
+    <h1>masking</h1>
+    <div class="row">
+        <div class="mask"></div>
+    </div>
+</body>
+</html>

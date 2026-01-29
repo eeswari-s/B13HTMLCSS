@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: 'Courier New', Courier, monospace;
+            background: #f4fafb;
+            padding: 30px;
+        }
+        h1{
+            text-align: center;
+            margin-bottom: 20px;
+            color: blue;
+            font-weight: 900;
+        }
+        .container{
+         
+           
+            display: flex;
+            gap:30px;
+            flex-wrap: wrap;
+          
+        }
+        .box{
+            width: 200px;
+            height: 120px;
+            background: #f7b5b5;
+            color:#f4fafb;
+            font-size: 30px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.6s ease;
+        }
+
+        .translate:hover{
+            transform: translate(20px,20px);
+        }
+        .translate-x:hover{
+            transform: translateX(80px);
+        }
+        .scale:hover{
+            transform: scale(1.5);
+        }
+        .skew:hover{
+            transform: skew(20deg);
+        }
+        .orgin:hover{
+            transform: rotate(90deg);
+        }
+        .three-d:hover{
+            transform: rotatey(80deg);
+        }
+        
+
+        
+
+    </style>
+</head>
+<body>
+    <h1>transforms</h1>
+    <div class="comtainer">
+        <div class="box translate">translate</div>
+        <div class="box translate-x">translate x</div>
+        <div class="box scale">scale</div>
+        <div class="box skew">skew</div>
+        <div class="box orgin">orgin</div>
+    </div>
+    <div class="scene">
+        <div class="box three-d">3d</div>
+    </div>
+</body>
+</html>

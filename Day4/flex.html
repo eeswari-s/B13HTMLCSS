@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+        body{
+            font-family:'Courier New', Courier, monospace;
+            background-color: aliceblue;
+
+        }
+        .navbar{
+            display:flex;
+            justify-content:space-between;
+        align-items: center;
+        background: #1e1e2f;
+        padding: 15px 30px;
+        color: white;    
+        }
+        .log{
+            font-size: 22px;
+            font-weight: bold;
+        }
+        .nav-links a{
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        .layout{
+            display: flex;
+            min-height: calc(100vh - 60px);
+        }
+        .sidebar{
+            width: 220px;
+            background: #1e1e2f;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            gap: 15px;
+        }
+        .sidebar a{
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            padding:10px;
+        border-radius: 5px;
+            }
+            .sidebar a:hover{
+                background-color: #3a3a4e;
+            }
+            .content{
+                flex:1;
+                padding: 20px;
+            }
+            .content h1{
+                margin-bottom: 20px;
+            }
+            .card-container{
+            
+                background-color: aqua;
+                display: flex;
+                gap: 20px;
+                flex-wrap: wrap;
+
+            }
+            .card{
+                background: white;
+                flex:1 1 220px;
+                padding: 25px;
+                border-radius: 10px;
+                box-shadow:0 10px 25px rgba(0, 0, 0, 0.5);
+                transition: transform 0.3s ease;
+            }
+            .card:hover{
+                transform: translateY(-6px);
+            }
+            .card h1{
+                margin-bottom: 10px;
+            }
+            .card p{
+                font-size: 16px;
+            }
+
+    </style>
+</head>
+<body>
+    <!--navbar-->
+    <header class="navbar">
+        <h2 class="logo">flex</h2>
+        <nav class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">dashboad</a>
+            <a href="#">peoducts</a>
+            <a href="#">profile</a>
+        </nav>
+    </header>
+    <!--main layout-->
+    <div class="layout">
+        <!--sidebar-->
+        <aside class="sidebar">
+            <a href="#">overview</a>
+            <a href="#">users</a>
+            <a href="#">classes</a>
+            <a href="#">settings</a>
+        </aside>
+        <main class="content">
+            <h1>dashboard</h1>
+            <div class="card-container">
+                <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis rerum excepturi molestiae quo nisi accusantium commodi, perspiciatis, incidunt quia esse, fugiat inventore est doloribus consequuntur suscipit nesciunt earum repudiandae cumque? Sit quas accusamus impedit dolorem perspiciatis explicabo tempore! A, dolores perspiciatis eum saepe molestias quaerat eius similique quasi incidunt expedita.</h2>
+
+                <div class="card">
+                    <h1>uses</h1>
+                    <p>100</p>
+                </div>
+
+                <div class="card">
+                    <h1>corders</h1>
+                    <p>1000</p>
+                </div>
+
+                <div class="card">
+                    <h1>revenue</h1>
+                    <p>10000</p>
+                </div>
+                <div class="card">
+                    <h1>feedback</h1>
+                    <p>10%</p>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
