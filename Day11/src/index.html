@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+  <style>
+    .navbar{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px 40px;
+    margin: 30px;
+    background: linear-gradient(to right, #0ea5e9, #6366f1);
+    color:white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+.menu{
+    display: flex;
+    gap: 15px;
+}
+.menu button{
+    padding: 8px 16px;
+    border: none;
+    background-color: white;
+    color: #1e3a8a;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    font-weight: 600;
+}
+
+ .card1{
+        width:300px;
+        padding: 24px;
+        margin: 40px;
+        background: linear-gradient(to right, #22c55e, #16a34a);
+        color:white;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+        position: relative;
+    }
+    .badge{
+        position: absolute;
+        top:12px;
+        right: 12px;
+        padding: 6px 12px;
+        color: blue;
+        font-size: 16px;
+        background-color:red;
+        border-radius: 18px;
+    }
+  </style>
+</head>
+<body>
+  <h1 class="text-3xl font-bold underline">
+    Hello world!
+  </h1>
+  
+<div class="grid grid-cols-5 grid-rows-5 gap-4 bg-yellow-400">
+    <div class="row-span-5">1</div>
+    <div >2</div>
+    <div >3</div>
+    <div >4</div>
+    <div >5</div>
+    <div class="col-start-2 bg-slate-900">6</div>
+    <div class="col-start-3 bg-blue-900">7</div>
+    <div class="col-start-4 bg-green-900">8</div>
+    <div class="col-start-5 bg-red-900">9</div>
+    <div class="col-start-5 row-start-3 bg-pink-900">10</div>
+    <div class="col-start-4 row-start-3 bg-blue-500">11</div>
+    <div class="col-start-3 row-start-3 bg-green-700">12</div>
+    <div class="col-start-2 row-start-3 bg-pink-700">13</div>
+    <div class="col-span-4 row-span-2 col-start-2 row-start-4 bg-green-400">14</div>
+</div>
+
+    <div class="
+  flex
+  justify-between items-center gap-5
+  p-5 px-10 m-8
+  bg-gradient-to-r from-sky-500 to-indigo-500
+  rounded-xl text-white
+">
+  <div class="text-xl font-semibold">
+    B13
+  </div>
+
+  <div class="flex gap-4">
+    <button class="px-4 py-2 bg-white text-blue-900 rounded-md">Home</button>
+    <button class="px-4 py-2 bg-white text-blue-900 rounded-md">About</button>
+    <button class="px-4 py-2 bg-white text-blue-900 rounded-md">Login</button>
+  </div>
+</div>
+
+   <div class="navbar">
+        <div class="logo">B13</div>
+        <div class="menu">
+            <button>Home</button>
+            <button>about</button>
+            <button>login</button>
+        </div>
+    </div>
+    <div class="
+  relative
+  w-[300px]
+  m-10
+  p-6
+  bg-gradient-to-r from-green-500 to-green-600
+  text-white
+  rounded-xl
+  shadow-2xl
+">
+  <span class="
+    absolute
+    top-3 right-3
+    px-3 py-1
+    bg-red-500
+    text-white text-xs
+    rounded-full
+  ">
+    New
+  </span>
+
+   Card
+</div>
+
+  <div class="card1">
+    <span class="badge">NEW</span>
+    card
+  </div>
+</body>
+</html>
