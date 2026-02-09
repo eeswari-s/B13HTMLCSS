@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>DOM selecting methods</h1>
+    <!--get elementby id---->
+    <h2>getelementby id</h2>
+    <p id="msg">This is  id based paragraph</p>
+    <p id="msg">this is id based para</p>
+
+    <!--getelementbyclassname-->
+    <h2>getelementbyclassname</h2>
+    <p class="item">one </p>
+    <p class="item">two </p>
+
+    <!--getelementbytagname-->
+    <h1>getelementbytagname</h1>
+    <p>tag one</p>
+    <p>tag two</p>
+
+    <!--query selector-->
+    <h2>queryselector</h2>
+    <p class="a">first </p>
+    <p class="a">second </p>
+
+    <!--queryselectorall-->
+    <h1>queryselectorall</h1>
+    <p class="a">list one</p>
+    <p class="a">list two</p>
+    <p class="a">list three</p>
+    <script>
+        //======================================
+        //getelementbyid
+        //=========================================
+        let idEl =document.getElementById("msg");
+        console.log("getelementbyid: ",idEl.innerText);
+
+
+          //======================================
+        //getelementbyclassname
+        //=========================================
+        let classEls=document.getElementsByClassName("item");
+        console.log("getelementbyclassnamne : ",classEls[0].innerText, "|",classEls[1].innerText);
+
+
+        
+          //======================================
+        //getelementbytagname
+        //=========================================
+        let tagEls=document.getElementsByTagName("p");
+        console.log("getelementbytagname: ",tagEls.length);
+
+
+        //======================================
+        //query selector
+        //=========================================
+        let qs=document.querySelector(".a");
+        console.log("queryselector: ",qs.innerText);
+
+        
+
+        //======================================
+        //query selector
+        //=========================================
+        let qsa=document.querySelectorAll(".a");
+        console.log("querySelectorAll");
+        qsa.forEach((el)=>console.log(el.innerHTML));
+    </script>
+</body>
+</html>

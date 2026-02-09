@@ -1,0 +1,25 @@
+DOM(Document Object Model)
+
+     A Programming interface that HtML as a tree structure.
+
+     Allows Java sript to access and modify elements, attrubutes, and content.
+
+     Every HTML tag becomes a node in the DOM tree.
+
+==========================================================================
+2. DOM properties:
+
+1.innerHTML
+2.innerText
+3.textContent
+4.value
+src,href
+style
+classList
+id,name
+======================================================================================
+1.innerHTML
+
+      Returns HTML content including tags.
+      Allows inserting html markup
+

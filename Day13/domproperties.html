@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>DOM POPERTIES</h1>
+
+    <div id="textBox" class="demoClass">hello<b>logesh</b></div>
+
+    <input id="inputBox" value="Mern">
+    <a id="myLink" href="https://www.amazon.in">amazon</a>
+    <img id="myImg" src="data:image/png;base64,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">
+
+    <div id="classBox" class="red">classlistdemo</div>
+
+    <hr>
+    <p id="text">this is text</p>
+    <button onclick="changecolor()">changecolor</button>
+
+    <p id="text">this is a sample text</p>
+    <button onclick="">change color</button>
+
+    <div id="box" style="width: 200px; height: 200px; background-color: red;"></div>
+    <button onclick="makeBlue()">make</button>
+
+
+    <script>
+        //===============================
+        //innerHTML
+        //================================
+        let htmlBox=document.getElementById("textBox");
+        console.log("innerHTML: ",htmlBox.innerHTML);
+
+        //===============================
+        //innerText
+        //================================
+        let innerBox=document.getElementById("textBox");
+        console.log("innerText: ",innerBox.innerText);
+
+        //textcontent
+             console.log("textcontent: ",innerBox.textContent);
+
+
+    //============================================================
+    //value
+    //=============================================================
+    let inputEl=document.getElementById("inputBox");
+    console.log("value: ",inputEl.value);
+
+    //==============================================================
+    //src,href
+    //================================================================
+    let link=document.getElementById("myLink");
+    let img=document.getElementById("myImg");
+    console.log("href: ",link.href);
+    console.log("src: ",img.src);
+
+    //=========================================================
+    //*style*/`
+    //========================================================
+
+    htmlBox.style.color="blue";
+    console.log("aplliedcolor");
+
+    //=====================================================================
+    //class list(add,remove,)
+    //=========================================================
+    let classBox=document.getElementById("classBox");
+
+    classBox.classList.add("activeclass");
+    console.log("classlist: ",classBox.classList);
+
+    classBox.classList.remove("red");
+    console.log("classlist: ",classBox.classList);
+//==============================================================
+//id,name
+//==============================================================
+console.log("id: ",htmlBox.id);
+htmlBox.id="newText";
+console.log("id: ",htmlBox.id);
+
+//=========================================================
+//css
+//=====================================================
+
+function changecolor(){
+    document.getElementById("text").style.color="blue";
+}
+
+//*css*/`
+    function makeBlue(){
+        document.getElementById("box").style.backgroundColor="blue";
+    }
+
+</script>
+</body>
+</html>
