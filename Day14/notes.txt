@@ -1,0 +1,11 @@
+2.DOM EVENTS
+
+1.onclick
+2.oninput
+3.onkeyup
+4.onkeydown   -task
+5.mouseoevr
+8.submit
+9.addeventlistener
+10.event object   -task
+11.bubling capturing    -task

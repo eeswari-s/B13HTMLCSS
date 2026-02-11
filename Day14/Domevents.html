@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--onclick-->
+    <button onclick="showMsg()">click me</button>
+    <br><br>
+    <!--onchange-->
+    <select onchange="selectColor(this.value)">
+        <option>red</option>
+        <option>blue</option>
+        <option>green</option>
+    </select>
+    <br><br>
+
+    <input type="text" id="username" onchange="showName()" placeholder="Enter your name">
+
+    <br><br>
+
+    <input oninput="live(this.value)" placeholder="enter your name">
+    <br><br>
+
+    <!--onkeyup-->
+    <input onkeyup="checkkey(event)" placeholder="type something....">
+    <br><br>
+    <div onmouseover="enterdiv()" onmouseout="leaveDiv()">hover me</div>
+    <br><br>
+    <!--onsubmit-->
+    <form id="myForm">
+        <input type="text" placeholder="enter your name">
+        <button >submit</button>
+    </form>
+    <br><br>
+
+    <button id="btn">click</button>
+    <script>
+        //onclick
+        function showMsg(){
+            console.log("hello");
+        }
+
+        //===================================
+        //onchange
+        //=================================
+        function selectColor(value){
+            console.log("you selected color: ",value);
+        }
+
+        function showName(){
+            let name=document.getElementById("username").value;
+            console.log(name);
+        }
+
+        function live(text){
+            console.log(text);
+        }
+
+        //=============================
+        //onkeyup
+        //===============================
+        function checkkey(e){
+            console.log(e.key);
+        }
+
+        //===========================
+        //mouseover,mouseout
+        //=============================
+        function enterdiv(){
+            console.log("mouse entered");
+        }
+
+        function leaveDiv(){
+            console.log("mouse left");
+        }
+
+        //=============================
+        //onsubmit
+        //=============================
+       document.getElementById("myForm").onsubmit = function(e){
+        e.preventDefault();
+        console.log("form submitted");
+       }
+
+
+       //=========================================
+       //add event listener
+       //=========================================
+     document.getElementById("btn").addEventListener("click" , ()=>{
+        console.log("button clicked");
+     });
+    </script>
+</body>
+</html>
