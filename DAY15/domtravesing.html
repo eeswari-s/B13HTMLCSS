@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--1 parent-->
+    <div id="parent">
+        <p id="child">hello</p>
+    </div>
+    <!--2 child-->
+    <ul id="list">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <script>
+        //task:firstelementchild, lastelementchild, nextelemntchild previous elemntchil,closeset
+        //==========================
+        //parent
+        //=======================
+        let ch =document.getElementById("child");
+        console.log(ch.parentElement);
+        //=======================
+        //child
+        //=================================
+        let items=document.getElementById("list").children;
+        console.log(items);
+    </script>
+</body>
+</html>

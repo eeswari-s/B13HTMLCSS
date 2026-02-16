@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red{
+            color: red;
+            background: rgb(12, 12, 12);
+        }
+    </style>
+</head>
+<body>
+    <!-- inline color change -->
+    <p id="text">hello</p>
+    <button onclick="changecolor()">Change color</button>
+    <!--add &remove classes-->
+    <p id="msg">hello</p>
+    <button onclick="add()">add</button>
+    <button onclick="remove()">remove</button>
+    <!--toggle-->
+    <body id="page">
+        <button onclick="toggle()">toggle</button>
+    <script>
+        //=======================================================
+        //inline
+        //======================================================
+        function changecolor(){
+            document.getElementById("text").style.color="red";//<p style="color:red">hello</p>
+          
+        }
+        //========================================================
+        //add and remove classes
+        //=======================================================
+        function add(){
+            document.getElementById("msg").classList.add("red");//<p class="red">hello</p>
+        }
+
+        function remove(){
+            document.getElementById("msg").classList.remove("red");
+        }
+        //========================================================
+        //toggle
+        //=======================================================
+        function toggle(){
+            document.getElementById("page").classList.toggle("red");
+        }
+    </script>
+</body>
+</html>

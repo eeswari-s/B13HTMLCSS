@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <!--accessing form data--> 
+   <input id="user" type="text" placeholder="Enter your name">
+   <button onclick="getdata()">Submit</button>
+   <!--validation-->
+   <input id="email" placeholder="enter email">
+   <button onclick="checkemail()">check</button>
+   <p id="msg"></p>
+   <!--preventdeafult   -->
+   <form id="myform">
+    <input id="name" type="text" placeholder="Enter your name">
+    <button type="submit">Submit</button>
+   </form>
+
+   <script>
+    //task: checkbox , 
+    function getdata(){
+       let name= document.getElementById("user").value;
+        console.log("user name: ",name);
+    }
+    //================================
+    //validation
+    //=================================
+    function checkemail(){
+        let mail=document.getElementById("email").value;
+
+        if(mail === ""){
+            document.getElementById("msg").innerText="email is required";
+        }else{
+            document.getElementById("msg").innerText="valid email";
+        }
+    }
+    //===============================================
+    //preeventdefault
+    //==================================================
+    document.getElementById("myform").onsubmit = function(e){
+        e.preventDefault();
+        console.log("form submitted");
+    };
+   </script>
+</body>
+</html>
